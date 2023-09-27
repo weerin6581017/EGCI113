@@ -1,15 +1,20 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
 
 int main()
 {
-   int a,b,c;
-   printf("Enter a,b,c (respectiely):");
-   scanf("%d,%d,%d",&a,&b,&c);
-   double x1,x2;
-   x1=(-b+sqrt(pow(b,2)-4*a*c))/(2*a);
-   x2=(-b-sqrt(pow(b,2)-4*a*c))/(2*a);
-   printf("x1=%lf\n",x1);
-   printf("x2=%lf\n",x2);
+   int a,b,c,min,max;
+    printf("Input 3 number\n");
+    scanf("%d,%d,%d",&a,&b,&c);
+
+    if(a<b&a<c) min=a;
+    else if (b<a&b<c) min=b;
+    else min=c;
+    printf("The minimum is %d\n",min);
+
+    if(a>b&a>c) max=a;
+    else if (b>a&b>c) max=b;
+    else  max=c;
+    printf("The maximum is %d\n",max);
     return 0;
 }
