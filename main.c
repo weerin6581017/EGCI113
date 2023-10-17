@@ -3,14 +3,15 @@
 
 int main()
 {
-    int count,i,n;
-    count=0;
+    int n,i,num;
     printf("Input a number:");
     scanf("%d",&n);
+    printf("The reverse of the number is ");
     for(i=n;i>0;i/=10)
     {
-        if(i%10==3) count++;
+        num=i%10;
+        printf("%d",num);
     }
-    printf("There are %d of 3 in this %d.",count,n);
+    printf(".");
     return 0;
 }
